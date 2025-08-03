@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio | Developer</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            :root {
+                --primary-color: #2563eb;
+                --secondary-color: #1e40af;
+                --dark-color: #1e293b;
+                --light-color: #f8fafc;
+                --gray-color: #64748b;
+                --max-width: 1200px;
+            }
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            
+            body {
+                background-color: #f1f5f9;
+                color: var(--dark-color);
+                line-height: 1.6;
+            }
+            
+            .container {
+                max-width: var(--max-width);
+                margin: 0 auto;
+                padding: 2rem;
+            }
+            
+            section {
+                margin-bottom: 3rem;
+                padding: 2rem;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+            
+            h1, h2, h3 {
+                color: var(--dark-color);
+                margin-bottom: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+                position: relative;
+                padding-bottom: 0.5rem;
+            }
+            
+            h2::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 60px;
+                height: 4px;
+                background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+                border-radius: 2px;
+            }
+            
+            p {
+                color: var(--gray-color);
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+            }
+            
+            /* About Section */
+            #about {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 2rem;
+                align-items: center;
+            }
+            
+            .about-content {
+                flex: 1;
+            }
+            
+            .about-image {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .about-image img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: contain;
+                border: 5px solid var(--primary-color);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            }
+            
+            /* Contact List */
+            ul {
+                list-style: none;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+            
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.75rem 1rem;
+                background: #f8fafc;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                color: var(--gray-color);
+            }
+            
+            li:hover {
+                background: var(--primary-color);
+                color: white;
+                transform: translateY(-2px);
+            }
+            
+            li i {
+                font-size: 1.2rem;
+            }
+            
+            /* Experience Section */
+            #experience {
+                text-align: center;
+            }
+            
+            /* CTA Button */
+            .cta-button {
+                display: inline-block;
+                margin-top: 1rem;
+                padding: 0.75rem 1.5rem;
+                background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+            
+            .cta-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            }
+            
+            /* Responsive Design */
+            @media (min-width: 768px) {
+                #about {
+                    flex-direction: row;
+                }
+                
+                .about-image img {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- About Section -->
+            <section id="about">
+                <div class="about-content">
+                    <h1>About Me</h1>
+                    <p>Welcome to my portfolio! I'm a passionate developer dedicated to creating innovative solutions that solve real-world problems. With expertise in modern web technologies, I build performant, accessible, and user-friendly applications.</p>
+                    
+                    <p>When I'm not coding, you can find me contributing to open-source projects, learning new technologies, or sharing knowledge with the developer community.</p>
+
+                    <h2>Contact</h2>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@example.com</li>
+                        <li><i class="fab fa-linkedin"></i> linkedin.com/in/yourprofile</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fab fa-github"></i> github.com/yourusername</li>
+                    </ul>
+                    
+                    <a href="#contact" class="cta-button">Get In Touch</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://bufferedky.com.ng/assets/logo.png" alt="Profile Picture">
+                </div>
+            </section>
+            
+            <!-- Experience Section -->
+            <section id="experience">
+                <h2>My Experience</h2>
+                <p>Details about your professional experience will go here.</p>
+                <p>This section can include your work history, projects, and achievements.</p>
+                <a href="#experience" class="cta-button">View Full Experience</a>
+            </section>
+        </div>
+    </body>
+</html>
